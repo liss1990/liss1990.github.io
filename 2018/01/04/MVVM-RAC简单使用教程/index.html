@@ -79,13 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="慢慢变胖的程序员">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="MVVM+RAC简单使用教程 既然是简单使用那就不讲那些概念了。什么是MVC、MVP、MVVM这些就忽略啦！很多大神写了很多，有关他们的优缺点都写的非常的好，我就没必要再写一遍了。直接开始写怎么开始一个 MVVM+RAC 的教程了。我喜欢在写代码的时候先写思路，这样就顺便把注释也写了。写Demo和下厨是一样一样的，得有先材料。那么写这个也要准备一下材料： ###1. 导入ReactiveCocoa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MVVM+RAC简单使用教程">
+<meta property="og:url" content="http://yoursite.com/2018/01/04/MVVM-RAC简单使用教程/index.html">
 <meta property="og:site_name" content="慢慢变胖的程序员">
+<meta property="og:description" content="MVVM+RAC简单使用教程 既然是简单使用那就不讲那些概念了。什么是MVC、MVP、MVVM这些就忽略啦！很多大神写了很多，有关他们的优缺点都写的非常的好，我就没必要再写一遍了。直接开始写怎么开始一个 MVVM+RAC 的教程了。我喜欢在写代码的时候先写思路，这样就顺便把注释也写了。写Demo和下厨是一样一样的，得有先材料。那么写这个也要准备一下材料： ###1. 导入ReactiveCocoa">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-01-04T08:31:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="慢慢变胖的程序员">
+<meta name="twitter:title" content="MVVM+RAC简单使用教程">
+<meta name="twitter:description" content="MVVM+RAC简单使用教程 既然是简单使用那就不讲那些概念了。什么是MVC、MVP、MVVM这些就忽略啦！很多大神写了很多，有关他们的优缺点都写的非常的好，我就没必要再写一遍了。直接开始写怎么开始一个 MVVM+RAC 的教程了。我喜欢在写代码的时候先写思路，这样就顺便把注释也写了。写Demo和下厨是一样一样的，得有先材料。那么写这个也要准备一下材料： ###1. 导入ReactiveCocoa">
 
 
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/04/MVVM-RAC简单使用教程/"/>
 
 
 
 
 
-  <title>慢慢变胖的程序员</title>
+  <title>MVVM+RAC简单使用教程 | 慢慢变胖的程序员</title>
   
 
 
@@ -140,8 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,9 +217,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -246,9 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/04/MVVM-RAC简单使用教程/" itemprop="url">MVVM+RAC简单使用教程</a></h1>
+          <h1 class="post-title" itemprop="name headline">MVVM+RAC简单使用教程</h1>
         
 
         <div class="post-meta">
@@ -298,9 +299,7 @@
       
 
       
-        
-          
-            <h1 id="MVVM-RAC简单使用教程"><a href="#MVVM-RAC简单使用教程" class="headerlink" title="MVVM+RAC简单使用教程"></a>MVVM+RAC简单使用教程</h1><hr>
+        <h1 id="MVVM-RAC简单使用教程"><a href="#MVVM-RAC简单使用教程" class="headerlink" title="MVVM+RAC简单使用教程"></a>MVVM+RAC简单使用教程</h1><hr>
 <p>既然是简单使用那就不讲那些概念了。什么是MVC、MVP、MVVM这些就忽略啦！很多大神写了很多，有关他们的优缺点都写的非常的好，我就没必要再写一遍了。<br>直接开始写怎么开始一个 <strong>MVVM+RAC</strong> 的教程了。<br>我喜欢在写代码的时候先写思路，这样就顺便把注释也写了。<br>写Demo和下厨是一样一样的，得有先材料。<br>那么写这个也要准备一下材料：</p>
 <p>###1. 导入ReactiveCocoa框架。<br>这里没有两个版本一个OC和一个Swift版本。如果你的项目是OC的你没必要在把Swift的下载下来，而且还要配置不然工程会报错。 </p>
 <p>Swift：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">use_frameworks!</span><br><span class="line">    target <span class="string">'Target名称'</span> do</span><br><span class="line">    pod <span class="string">'ReactiveCocoa'</span>, <span class="string">'5.0.0-alpha.3'</span> </span><br><span class="line">end</span><br></pre></td></tr></table></figure></p>
@@ -319,8 +318,6 @@
 <p>####2.8创建C 装载视图 让后执行Command 命名刷新表格数据<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">#import "ListViewController.h"</span><br><span class="line">#import "ListViewModel.h"</span><br><span class="line">#import "BookModel.h"</span><br><span class="line"><span class="meta">@interface</span> ListViewController ()</span><br><span class="line"><span class="meta">@property</span>(nonatomic,strong)UITableView *tableView;</span><br><span class="line"><span class="meta">@property</span>(nonatomic,strong)ListViewModel *requestViewModel;</span><br><span class="line"><span class="meta">@end</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@implementation</span> ListViewController</span><br><span class="line">-(ListViewModel*)requestViewModel&#123;</span><br><span class="line">    <span class="keyword">if</span> (!_requestViewModel) &#123;</span><br><span class="line">        _requestViewModel = [[ListViewModel alloc]init];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> _requestViewModel;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</span><br><span class="line">    [<span class="keyword">super</span> viewDidLoad];</span><br><span class="line">    self.view.backgroundColor=[UIColor whiteColor];</span><br><span class="line">    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(<span class="number">0</span>, <span class="number">0</span>, self.view.frame.size.width, self.view.frame.size.height)];</span><br><span class="line">    self.tableView.dataSource = self.requestViewModel;</span><br><span class="line">    self.tableView.delegate=self.requestViewModel;</span><br><span class="line">    self.requestViewModel.nav = self.navigationController;</span><br><span class="line">    [self.view addSubview:self.tableView];</span><br><span class="line">    </span><br><span class="line">    RACSignal *requestSiganl = [self.requestViewModel.requeseCommand execute:nil];</span><br><span class="line">    [requestSiganl subscribeNext:^(id  _Nullable x) &#123;</span><br><span class="line">        self.requestViewModel.models = x;</span><br><span class="line">        [self.tableView reloadData];</span><br><span class="line">    &#125;];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>在此所有的代码都在这里了，写完你会发现结构确实要比MVC清晰多了。各项职能都很明确。<br>当然怎么去选择都是根据具体业务去实现，业务简单的完全就可以MVC了。没必要写成这样，复杂一点的，就可以使用MVVM让你的结构变得更加清晰。</p>
 
-          
-        
       
     </div>
     
@@ -337,198 +334,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/04/史上最详-创建一个私有的Pod教程/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="李丝思 Leo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="慢慢变胖的程序员">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/04/史上最详-创建一个私有的Pod教程/" itemprop="url">史上最详 创建一个私有的Pod教程</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-04T16:27:21+08:00">
-                2018-01-04
-              </time>
+              <a href="/2018/01/04/史上最详-创建一个私有的Pod教程/" rel="next" title="史上最详 创建一个私有的Pod教程">
+                <i class="fa fa-chevron-left"></i> 史上最详 创建一个私有的Pod教程
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h1 id="史上最详-创建一个私有的Pod教程"><a href="#史上最详-创建一个私有的Pod教程" class="headerlink" title="史上最详 创建一个私有的Pod教程"></a>史上最详 创建一个私有的Pod教程</h1><ol>
-<li><strong>创建自己的私有库代码。</strong></li>
-</ol>
-<p><img src="http://img.blog.csdn.net/20170906200236551?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGlzaTY0NDQyNjEzNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="先按照这个创建好自己的私有代码库"></p>
-<p>然后你会看到：</p>
-<p><img src="http://img.blog.csdn.net/20170906200722568?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGlzaTY0NDQyNjEzNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<ol>
-<li><p>2</p>
-<p><strong>将代码库clone到本地</strong><br>在你本地桌面创建一个文件夹，然后cd 到这个目录下。执行下面代</p>
-<blockquote>
-<p> cd 你的文件夹目录<br> git clone <a href="https://github.com/liss1990/lspodsViews.git" target="_blank" rel="noopener">https://github.com/liss1990/lspodsViews.git</a></p>
-</blockquote>
-<p>我是放在桌面，然后打开你的文件应该是这个样的<br><img src="http://img.blog.csdn.net/20170906202157080?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGlzaTY0NDQyNjEzNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-</li>
-<li><p><strong>往刚刚创建的文件夹目录下添加代码</strong><br><img src="http://img.blog.csdn.net/20170906202943993?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGlzaTY0NDQyNjEzNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-</li>
-<li><p>然后创建一个.podspec 文件<br> 每个 Pods 依赖库必须有且仅有一个名称和依赖库名保持一致，后缀名为 .podspec 的描述文件。这里我们依赖库的描述文件名称应该为 lspodsViews.podspec。<br> 使用命令行执行：</p>
-<blockquote>
-<p> pod spec create lspodsViews</p>
-</blockquote>
-</li>
-</ol>
-<p><img src="http://img.blog.csdn.net/20170906203745925?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGlzaTY0NDQyNjEzNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>然后打开你的podspec文件<br><img src="http://img.blog.csdn.net/20170906204407314?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGlzaTY0NDQyNjEzNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<blockquote>
-<p> s.requires_arc  = true 是否开启ARC<br>  s.description  = &lt;&lt;-DESC<br>        一个你自己的私有pod一定要写。不然会提示一些不是警告就是错误的。<br>                   DESC</p>
-</blockquote>
-<p> 4 上传修改到 github<br>    先查看下有没有问题podspec</p>
-<pre><code>&gt;   pod lib lint
-</code></pre><p><img src="http://img.blog.csdn.net/20170906205200301?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGlzaTY0NDQyNjEzNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>这些都是一些警告啦~木有问题的,然后在执行</p>
-<blockquote>
-<p> pod lib lint –allow-warnings<br><img src="http://img.blog.csdn.net/20170906205401082?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGlzaTY0NDQyNjEzNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-</blockquote>
-<p>这就可以啦！<br>然后你的代码调试后没有问题你就提交了！</p>
-<blockquote>
-<p>git add -A &amp;&amp; git commit -m “提交代码的注释”<br>    git push origin master<br>然后去刷新你的github吧！你会看到<br><img src="http://img.blog.csdn.net/20170906205728216?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGlzaTY0NDQyNjEzNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-</blockquote>
-<p>5.接着创建一个pod版本仓库<br><img src="http://img.blog.csdn.net/20170906210042966?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGlzaTY0NDQyNjEzNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>先打开一些隐藏的目录。因为CocoaPods都是隐藏的。</p>
-<blockquote>
-<p>  //打开隐藏的命令:</p>
-</blockquote>
-<p>defaults write com.apple.finder AppleShowAllFiles -bool true<br>//关闭隐藏的命令:</p>
-<p>defaults write com.apple.finder AppleShowAllFiles -bool false</p>
-<p> 然后再去找这个cocoapods目录<br> <img src="http://img.blog.csdn.net/20170906210429169?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGlzaTY0NDQyNjEzNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br><img src="http://img.blog.csdn.net/20170906210602041?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGlzaTY0NDQyNjEzNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>6.然后把刚刚创建的那个仓库执行到本地</p>
-<blockquote>
-<p>pod repo add lspodsViewsPods <a href="https://github.com/liss1990/lspodsViewsPods" target="_blank" rel="noopener">https://github.com/liss1990/lspodsViewsPods</a></p>
-</blockquote>
-<p>把那个替换成你的就可以了执行后<br> <img src="http://img.blog.csdn.net/20170906211035734?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGlzaTY0NDQyNjEzNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>7.接着在你之前那个文件夹里面执行一下命名：<br><img src="http://img.blog.csdn.net/20170906211545722?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGlzaTY0NDQyNjEzNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<blockquote>
-<p> git tag -m “first relesase” “0.0.1”<br> git push  –tags</p>
-</blockquote>
-<p>这是给你的 设置你的pod 版本号。一定要和你podspec的版本统一噢~~<br>接着在执行 这些都是在你代码仓库那个文件夹里面执行的噢~~~</p>
-<blockquote>
-<p>pod repo push lspodsViewsPods lspodsViews.podspec</p>
-</blockquote>
-<p><img src="http://img.blog.csdn.net/20170906213051352?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGlzaTY0NDQyNjEzNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>然后接着你就可以输入你的账号和密码了！<br><img src="http://img.blog.csdn.net/20170906213523568?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGlzaTY0NDQyNjEzNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>欧耶 你快成功了！</p>
-<p>再去你的github里面看下你会发现<br><img src="http://img.blog.csdn.net/20170906213606306?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGlzaTY0NDQyNjEzNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>8.然后可以搜索一下pod</p>
-<blockquote>
-<p> pod search lspodsViewPods</p>
-</blockquote>
-<p>9.创建你自己的podfile  然后再引用<br><img src="http://img.blog.csdn.net/20170906215348474?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGlzaTY0NDQyNjEzNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br><img src="http://img.blog.csdn.net/20170906215403003?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGlzaTY0NDQyNjEzNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p> 好啦 完美收工。！！</p>
-<p>如果还有什么不懂的可以加我微信：<br><img src="http://img.blog.csdn.net/20170906215652841?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGlzaTY0NDQyNjEzNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -538,138 +365,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/04/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="李丝思 Leo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="慢慢变胖的程序员">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/04/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-04T15:15:41+08:00">
-                2018-01-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -677,6 +377,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -697,8 +401,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -740,6 +453,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MVVM-RAC简单使用教程"><span class="nav-number">1.</span> <span class="nav-text">MVVM+RAC简单使用教程</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -873,6 +602,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
