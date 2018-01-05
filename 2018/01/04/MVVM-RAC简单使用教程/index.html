@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="MVVM+RAC简单使用教程 既然是简单使用那就不讲那些概念了。什么是MVC、MVP、MVVM这些就忽略啦！很多大神写了很多，有关他们的优缺点都写的非常的好，我就没必要再写一遍了。直接开始写怎么开始一个 MVVM+RAC 的教程了。我喜欢在写代码的时候先写思路，这样就顺便把注释也写了。写Demo和下厨是一样一样的，得有先材料。那么写这个也要准备一下材料： ###1. 导入ReactiveCocoa">
+<meta name="description" content="MVVM+RAC简单使用教程 既然是简单使用那就不讲那些概念了。什么是MVC、MVP、MVVM这些就忽略啦！很多大神写了很多，有关他们的优缺点都写的非常的好，我就没必要再写一遍了。直接开始写怎么开始一个 MVVM+RAC 的教程了。我喜欢在写代码的时候先写思路，这样就顺便把注释也写了。写Demo和下厨是一样一样的，得有先材料。那么写这个也要准备一下材料：">
 <meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MVVM+RAC简单使用教程">
 <meta property="og:url" content="http://yoursite.com/2018/01/04/MVVM-RAC简单使用教程/index.html">
 <meta property="og:site_name" content="慢慢变胖的程序员">
-<meta property="og:description" content="MVVM+RAC简单使用教程 既然是简单使用那就不讲那些概念了。什么是MVC、MVP、MVVM这些就忽略啦！很多大神写了很多，有关他们的优缺点都写的非常的好，我就没必要再写一遍了。直接开始写怎么开始一个 MVVM+RAC 的教程了。我喜欢在写代码的时候先写思路，这样就顺便把注释也写了。写Demo和下厨是一样一样的，得有先材料。那么写这个也要准备一下材料： ###1. 导入ReactiveCocoa">
+<meta property="og:description" content="MVVM+RAC简单使用教程 既然是简单使用那就不讲那些概念了。什么是MVC、MVP、MVVM这些就忽略啦！很多大神写了很多，有关他们的优缺点都写的非常的好，我就没必要再写一遍了。直接开始写怎么开始一个 MVVM+RAC 的教程了。我喜欢在写代码的时候先写思路，这样就顺便把注释也写了。写Demo和下厨是一样一样的，得有先材料。那么写这个也要准备一下材料：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-04T10:01:53.000Z">
+<meta property="og:updated_time" content="2018-01-05T01:43:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MVVM+RAC简单使用教程">
-<meta name="twitter:description" content="MVVM+RAC简单使用教程 既然是简单使用那就不讲那些概念了。什么是MVC、MVP、MVVM这些就忽略啦！很多大神写了很多，有关他们的优缺点都写的非常的好，我就没必要再写一遍了。直接开始写怎么开始一个 MVVM+RAC 的教程了。我喜欢在写代码的时候先写思路，这样就顺便把注释也写了。写Demo和下厨是一样一样的，得有先材料。那么写这个也要准备一下材料： ###1. 导入ReactiveCocoa">
+<meta name="twitter:description" content="MVVM+RAC简单使用教程 既然是简单使用那就不讲那些概念了。什么是MVC、MVP、MVVM这些就忽略啦！很多大神写了很多，有关他们的优缺点都写的非常的好，我就没必要再写一遍了。直接开始写怎么开始一个 MVVM+RAC 的教程了。我喜欢在写代码的时候先写思路，这样就顺便把注释也写了。写Demo和下厨是一样一样的，得有先材料。那么写这个也要准备一下材料：">
 
 
 
@@ -98,7 +98,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
+    scheme: 'Mist',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -343,7 +343,7 @@
 
       
         <h1 id="MVVM-RAC简单使用教程"><a href="#MVVM-RAC简单使用教程" class="headerlink" title="MVVM+RAC简单使用教程"></a>MVVM+RAC简单使用教程</h1><hr>
-<p>既然是简单使用那就不讲那些概念了。什么是MVC、MVP、MVVM这些就忽略啦！很多大神写了很多，有关他们的优缺点都写的非常的好，我就没必要再写一遍了。<br>直接开始写怎么开始一个 <strong>MVVM+RAC</strong> 的教程了。<br>我喜欢在写代码的时候先写思路，这样就顺便把注释也写了。<br>写Demo和下厨是一样一样的，得有先材料。<br>那么写这个也要准备一下材料：</p>
+<p>既然是简单使用那就不讲那些概念了。什么是MVC、MVP、MVVM这些就忽略啦！很多大神写了很多，有关他们的优缺点都写的非常的好，我就没必要再写一遍了。<br>直接开始写怎么开始一个 <strong>MVVM+RAC</strong> 的教程了。<br>我喜欢在写代码的时候先写思路，这样就顺便把注释也写了。<br>写Demo和下厨是一样一样的，得有先材料。<br>那么写这个也要准备一下材料：<br><a id="more"></a></p>
 <p>###1. 导入ReactiveCocoa框架。<br>这里没有两个版本一个OC和一个Swift版本。如果你的项目是OC的你没必要在把Swift的下载下来，而且还要配置不然工程会报错。 </p>
 <p>Swift：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">use_frameworks!</span><br><span class="line">    target <span class="string">'Target名称'</span> do</span><br><span class="line">    pod <span class="string">'ReactiveCocoa'</span>, <span class="string">'5.0.0-alpha.3'</span> </span><br><span class="line">end</span><br></pre></td></tr></table></figure></p>
 <p>OC:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">use_frameworks!</span><br><span class="line">    target <span class="string">'Target名称'</span> do</span><br><span class="line">    pod <span class="string">'ReactiveObjC'</span>, <span class="string">'~&gt; 2.1.0'</span> </span><br><span class="line"> end</span><br></pre></td></tr></table></figure></p>
@@ -483,7 +483,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -576,7 +576,7 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
 
 
 
@@ -675,13 +675,6 @@
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
-
-
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
