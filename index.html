@@ -252,6 +252,164 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/05/iOS开发之-UnitTests、UITests/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="李丝思 Leo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/头像.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="慢慢变胖的程序员">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/05/iOS开发之-UnitTests、UITests/" itemprop="url">iOS自动化测试</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-05T16:27:21+08:00">
+                2018-01-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/自动测试/" itemprop="url" rel="index">
+                    <span itemprop="name">自动测试</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="iOS开发之-UnitTests、UITests"><a href="#iOS开发之-UnitTests、UITests" class="headerlink" title="iOS开发之-UnitTests、UITests"></a>iOS开发之-UnitTests、UITests</h1><p>这是iOS开发的一大神器。能快速的测试自己的项目，而且不要去麻烦测试MM就能自己搞定测试环节，特别是公司的测试很忙的时候，那你更加要学习了。<br>本教程只是一个简单的教程，任何东西都是从简单开始。我们就不从Hello word开始了。这个也太…<br>从每个App都有的登陆注册开始。我最喜欢写登陆注册了😄。<br>Demo地址：<a href="https://github.com/liss1990/UITestDemo" target="_blank" rel="noopener">https://github.com/liss1990/UITestDemo</a></p>
+<p>##1、新建一个工程<br>在新建的时候注意够上两个选项:</p>
+<ul>
+<li style="list-style: none"><input type="checkbox" checked> Include Unite Tests   —–//这个是表示单元测试</li>
+<li style="list-style: none"><input type="checkbox" checked> Include UI Tests     —–//这个代表UI测试 可以让你的执行的步骤重新执行。你的UI操作的脚本都写在这里</li>
+</ul>
+<p>如果没有勾上，后面你也可以在 <strong>Targets</strong> 里面去新建。后面新增如图:</p>
+<p>###先介绍几个方法</p>
+<ul>
+<li>-(void)setUp ; ////这是开始</li>
+<li>在setup 里面有这个方法 [[[XCUIApplication alloc] init] launch];  这是启动程序</li>
+<li>-(void)tearDown;///这里是结束 释放资源</li>
+<li>-(void)testExample;///这里就是你执行脚本的方法。</li>
+</ul>
+<p>这里有一些我们之前没用过的东西<br>XCUIElement：是继承NSObject，实现协议XCUIElementAttributes, XCUIElementTypeQueryProvider用来表示系统的各种UI元素。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">XCUIApplication *app = [[XCUIApplication alloc] init];</span><br><span class="line">   [app<span class="comment">/*@START_MENU_TOKEN@*/</span>.buttons[@<span class="string">"otherBtn"</span>]<span class="comment">/*[[".buttons[@\"\\U70b9\\U51fb\\U8df3\\U8f6c\\U9875\\U9762\"]",".buttons[@\"otherBtn\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/</span> tap]; </span><br><span class="line">   XCUIElement *usernameTextField = app<span class="comment">/*@START_MENU_TOKEN@*/</span>.textFields[@<span class="string">"username"</span>]<span class="comment">/*[[".textFields[@\"\\U8d26\\U53f7\"]",".textFields[@\"username\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/</span>;</span><br><span class="line">   [usernameTextField tap];</span><br><span class="line">   [usernameTextField typeText:@<span class="string">"3333"</span>];</span><br><span class="line">   XCUIElement *pwdTextField = app<span class="comment">/*@START_MENU_TOKEN@*/</span>.textFields[@<span class="string">"pwd"</span>]<span class="comment">/*[[".textFields[@\"\\U5bc6\\U7801\"]",".textFields[@\"pwd\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/</span>;</span><br><span class="line">   [pwdTextField tap];</span><br><span class="line">   [pwdTextField typeText:@<span class="string">"4"</span>];</span><br><span class="line">   [pwdTextField tap];</span><br><span class="line">   [pwdTextField typeText:@<span class="string">"444"</span>];</span><br><span class="line">   [app<span class="comment">/*@START_MENU_TOKEN@*/</span>.buttons[@<span class="string">"loginBtn"</span>]<span class="comment">/*[[".buttons[@\"Button\"]",".buttons[@\"loginBtn\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/</span> tap];</span><br><span class="line">   [app.navigationBars[@<span class="string">"UIView"</span>].buttons[@<span class="string">"Back"</span>] tap];</span><br></pre></td></tr></table></figure>
+<p><img src="/BlogImages/Snip20171203_1.png" alt="图1"><br><img src="/BlogImages/Snip20171203_2.png" alt="图2"><br><img src="/BlogImages/Snip20171204_1.png" alt="图2"><br><img src="/BlogImages/Snip20171204_2.png" alt="图2"><br><img src="/BlogImages/Snip20171204_5.png" alt="图2"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/04/MVVM-RAC简单使用教程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -784,7 +942,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -795,7 +953,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -806,7 +964,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
